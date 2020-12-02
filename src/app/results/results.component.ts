@@ -7,9 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.css'],
 })
-
 export class ResultsComponent implements OnInit {
-
   selection: string;
   price_expand: boolean = false;
 
@@ -23,8 +21,7 @@ export class ResultsComponent implements OnInit {
     document.getElementById('map-section').style.visibility = 'hidden';
   }
 
-  showAlert(variable){
+  showAlert(variable) {
     console.log(variable);
   }
-
 }
