@@ -7,7 +7,6 @@ declare var jQuery: any;
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.css'],
 })
-
 export class ResultsComponent implements OnInit {
   expand: boolean = false;
 

@@ -14,13 +14,9 @@
 	<div class="morefilters-body">
 		<!-- layout sections using a grid, each section will be grid as well -->
 		<div class="filter-section popular-filters">
-			<span style="font-size: large; font-weight: bold;"
-				>{{moreFiltersSections.popularFilters.name | uppercase}}</span
-			>
-			<div
-				class="filter-content"
-				*ngFor="let item of moreFiltersSections.popularFilters.filters | keyvalue"
-			>
+			<span
+				style="font-size: large; font-weight: bold;">{{moreFiltersSections.popularFilters.name | uppercase}}</span>
+			<div class="filter-content" *ngFor="let item of moreFiltersSections.popularFilters.filters | keyvalue">
 				<label>
 					{{item.key}}
 				</label>
@@ -28,57 +24,35 @@
 			</div>
 		</div>
 		<div class="filter-section rooms-and-beds">
-			<span style="font-size: large; font-weight: bold;"
-				>{{moreFiltersSections.roomsAndBeds.name | uppercase}}</span
-			>
-			<div
-				class="filter-content"
-				*ngFor="let item of moreFiltersSections.roomsAndBeds.filters | keyvalue"
-			>
+			<span
+				style="font-size: large; font-weight: bold;">{{moreFiltersSections.roomsAndBeds.name | uppercase}}</span>
+			<div class="filter-content" *ngFor="let item of moreFiltersSections.roomsAndBeds.filters | keyvalue">
 				<label>
 					{{item.key}}
 				</label>
-				<button
-					type="button"
-					class="btn btn-success btn-circle btn-sm"
-					(click)="item.value = item.value + 1"
-				>
-					&#xFF0B;</button
-				><span style="width: 100%; text-align: center;">
+				<button type="button" class="btn btn-success btn-circle btn-sm" (click)="item.value = item.value + 1">
+					&#xFF0B;</button><span style="width: 100%; text-align: center;">
 					{{item.value}}
 				</span>
 
-				<ng-container
-					*ngIf="item.value <= 0; then thenTemplate; else elseTemplate"
-				></ng-container>
+				<ng-container *ngIf="item.value <= 0; then thenTemplate; else elseTemplate"></ng-container>
 				<ng-template #thenTemplate>
-					<button
-						type="button"
-						class="btn btn-danger btn-circle btn-sm"
-						(click)="item.value = 0"
-					>
+					<button type="button" class="btn btn-danger btn-circle btn-sm" (click)="item.value = 0">
 						&#xFF0D;
 					</button>
 				</ng-template>
 				<ng-template #elseTemplate>
-					<button
-						type="button"
-						class="btn btn-danger btn-circle btn-sm"
-						(click)="item.value = item.value - 1"
-					>
+					<button type="button" class="btn btn-danger btn-circle btn-sm"
+						(click)="item.value = item.value - 1">
 						&#xFF0D;
 					</button>
 				</ng-template>
 			</div>
 		</div>
 		<div class="filter-section verified-places">
-			<span style="font-size: large; font-weight: bold;"
-				>{{moreFiltersSections.verifiedPlaces.name | uppercase}}</span
-			>
-			<div
-				class="filter-content"
-				*ngFor="let item of moreFiltersSections.verifiedPlaces.filters | keyvalue"
-			>
+			<span
+				style="font-size: large; font-weight: bold;">{{moreFiltersSections.verifiedPlaces.name | uppercase}}</span>
+			<div class="filter-content" *ngFor="let item of moreFiltersSections.verifiedPlaces.filters | keyvalue">
 				<label>
 					{{item.key}}
 				</label>
@@ -86,13 +60,9 @@
 			</div>
 		</div>
 		<div class="filter-section more-options">
-			<span style="font-size: large; font-weight: bold;"
-				>{{moreFiltersSections.moreOptions.name | uppercase}}</span
-			>
-			<div
-				class="filter-content"
-				*ngFor="let item of moreFiltersSections.moreOptions.filters | keyvalue"
-			>
+			<span
+				style="font-size: large; font-weight: bold;">{{moreFiltersSections.moreOptions.name | uppercase}}</span>
+			<div class="filter-content" *ngFor="let item of moreFiltersSections.moreOptions.filters | keyvalue">
 				<label>
 					{{item.key}}
 				</label>
@@ -100,13 +70,8 @@
 			</div>
 		</div>
 		<div class="filter-section amenities">
-			<span style="font-size: large; font-weight: bold;"
-				>{{moreFiltersSections.amenities.name | uppercase}}</span
-			>
-			<div
-				class="filter-content"
-				*ngFor="let item of moreFiltersSections.amenities.filters | keyvalue"
-			>
+			<span style="font-size: large; font-weight: bold;">{{moreFiltersSections.amenities.name | uppercase}}</span>
+			<div class="filter-content" *ngFor="let item of moreFiltersSections.amenities.filters | keyvalue">
 				<label>
 					{{item.key}}
 				</label>
@@ -114,13 +79,9 @@
 			</div>
 		</div>
 		<div class="filter-section facilities">
-			<span style="font-size: large; font-weight: bold;"
-				>{{moreFiltersSections.facilities.name | uppercase}}</span
-			>
-			<div
-				class="filter-content"
-				*ngFor="let item of moreFiltersSections.facilities.filters | keyvalue"
-			>
+			<span
+				style="font-size: large; font-weight: bold;">{{moreFiltersSections.facilities.name | uppercase}}</span>
+			<div class="filter-content" *ngFor="let item of moreFiltersSections.facilities.filters | keyvalue">
 				<label>
 					{{item.key}}
 				</label>
@@ -128,13 +89,9 @@
 			</div>
 		</div>
 		<div class="filter-section property-type">
-			<span style="font-size: large; font-weight: bold;"
-				>{{moreFiltersSections.propertyType.name | uppercase}}</span
-			>
-			<div
-				class="filter-content"
-				*ngFor="let item of moreFiltersSections.propertyType.filters | keyvalue"
-			>
+			<span
+				style="font-size: large; font-weight: bold;">{{moreFiltersSections.propertyType.name | uppercase}}</span>
+			<div class="filter-content" *ngFor="let item of moreFiltersSections.propertyType.filters | keyvalue">
 				<label>
 					{{item.key}}
 				</label>
@@ -142,13 +99,9 @@
 			</div>
 		</div>
 		<div class="filter-section unique-stays">
-			<span style="font-size: large; font-weight: bold;"
-				>{{moreFiltersSections.uniqueStays.name | uppercase}}</span
-			>
-			<div
-				class="filter-content"
-				*ngFor="let item of moreFiltersSections.uniqueStays.filters | keyvalue"
-			>
+			<span
+				style="font-size: large; font-weight: bold;">{{moreFiltersSections.uniqueStays.name | uppercase}}</span>
+			<div class="filter-content" *ngFor="let item of moreFiltersSections.uniqueStays.filters | keyvalue">
 				<label>
 					{{item.key}}
 				</label>
@@ -156,13 +109,9 @@
 			</div>
 		</div>
 		<div class="filter-section house-rules">
-			<span style="font-size: large; font-weight: bold;"
-				>{{moreFiltersSections.houseRules.name | uppercase}}</span
-			>
-			<div
-				class="filter-content"
-				*ngFor="let item of moreFiltersSections.houseRules.filters | keyvalue"
-			>
+			<span
+				style="font-size: large; font-weight: bold;">{{moreFiltersSections.houseRules.name | uppercase}}</span>
+			<div class="filter-content" *ngFor="let item of moreFiltersSections.houseRules.filters | keyvalue">
 				<label>
 					{{item.key}}
 				</label>
@@ -170,13 +119,9 @@
 			</div>
 		</div>
 		<div class="filter-section neighborhoods">
-			<span style="font-size: large; font-weight: bold;"
-				>{{moreFiltersSections.neighborhoods.name | uppercase}}</span
-			>
-			<div
-				class="filter-content"
-				*ngFor="let item of moreFiltersSections.neighborhoods.filters | keyvalue"
-			>
+			<span
+				style="font-size: large; font-weight: bold;">{{moreFiltersSections.neighborhoods.name | uppercase}}</span>
+			<div class="filter-content" *ngFor="let item of moreFiltersSections.neighborhoods.filters | keyvalue">
 				<label>
 					{{item.key}}
 				</label>
@@ -184,13 +129,9 @@
 			</div>
 		</div>
 		<div class="filter-section host-language">
-			<span style="font-size: large; font-weight: bold;"
-				>{{moreFiltersSections.hostLanguage.name | uppercase}}</span
-			>
-			<div
-				class="filter-content"
-				*ngFor="let item of moreFiltersSections.hostLanguage.filters | keyvalue"
-			>
+			<span
+				style="font-size: large; font-weight: bold;">{{moreFiltersSections.hostLanguage.name | uppercase}}</span>
+			<div class="filter-content" *ngFor="let item of moreFiltersSections.hostLanguage.filters | keyvalue">
 				<label>
 					{{item.key}}
 				</label>
@@ -198,10 +139,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="morefilters-footer">
+	<div class="modal-footer morefilters-footer">
 		<a> clear all </a>
 		<!--left side of footer-->
 		<button>show +### stays</button>
 		<!--right side of footer-->
+		<button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">
+			Close
+		</button>
 	</div>
 </div>
