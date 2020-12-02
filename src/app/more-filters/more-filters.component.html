@@ -44,16 +44,31 @@
 					(click)="item.value = item.value + 1"
 				>
 					&#xFF0B;</button
-				><span style="width: 100%; text-align: center;"
-					>{{item.value}}</span
-				>
-				<button
-					type="button"
-					class="btn btn-danger btn-circle btn-sm"
-					(click)="item.value = item.value - 1"
-				>
-					&#xFF0D;
-				</button>
+				><span style="width: 100%; text-align: center;">
+					{{item.value}}
+				</span>
+
+				<ng-container
+					*ngIf="item.value <= 0; then thenTemplate; else elseTemplate"
+				></ng-container>
+				<ng-template #thenTemplate>
+					<button
+						type="button"
+						class="btn btn-danger btn-circle btn-sm"
+						(click)="item.value = 0"
+					>
+						&#xFF0D;
+					</button>
+				</ng-template>
+				<ng-template #elseTemplate>
+					<button
+						type="button"
+						class="btn btn-danger btn-circle btn-sm"
+						(click)="item.value = item.value - 1"
+					>
+						&#xFF0D;
+					</button>
+				</ng-template>
 			</div>
 		</div>
 		<div class="filter-section verified-places">
