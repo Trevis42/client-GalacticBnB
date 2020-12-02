@@ -70,6 +70,7 @@ import { PricefilterComponent } from './pricefilter/pricefilter.component';
 import { ExploreNearbyComponent } from './explore-nearby/explore-nearby.component';
 import { PriceExpandComponent } from './price-expand/price-expand.component';
 import { MoreFiltersModalComponent } from './more-filters-modal/more-filters-modal.component';
+import { MoreFiltersModalContent } from './more-filters-modal/more-filters-modal.component';
 
 @NgModule({
   declarations: [
@@ -129,6 +130,7 @@ import { MoreFiltersModalComponent } from './more-filters-modal/more-filters-mod
     ExploreNearbyComponent,
     PriceExpandComponent,
     MoreFiltersModalComponent,
+    MoreFiltersModalContent,
   ],
   imports: [
     FormsModule,
@@ -152,6 +154,6 @@ import { MoreFiltersModalComponent } from './more-filters-modal/more-filters-mod
     ListingInfoService,
   ],
 
-  bootstrap: [AppComponent, MoreFiltersModalComponent],
+  bootstrap: [AppComponent, MoreFiltersModalComponent, MoreFiltersComponent],
 })
 export class AppModule {}

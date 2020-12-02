@@ -10,7 +10,6 @@ import { ActivatedRoute } from '@angular/router';
 export class ResultsComponent implements OnInit {
   selection: string;
   price_expand: boolean = false;
-  morefilters_expand: boolean = false;
 
   constructor() {}
 
