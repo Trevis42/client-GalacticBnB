@@ -22,7 +22,7 @@ export class ResultsComponent implements OnInit {
   public place : string;
 
   ngOnInit(): void {
-   this.elasticsearch("");
+    this.elasticsearch("");
   }
 
   //elasticsearch imported here...

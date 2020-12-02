@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+//import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-more-filters',
@@ -189,7 +189,7 @@ export class MoreFiltersComponent implements OnInit {
       }
     },
   };
-  constructor(public activeModal: NgbActiveModal) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.getFilterProperties();
