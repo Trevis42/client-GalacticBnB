@@ -5,19 +5,21 @@
 	<div id="button-results">
 		<h6>#_ of results - from day to day || guests #</h6>
 		<h2>Stays in ___Search Box Value___</h2>
-		<ng-container class="button-results-btns">
-			<app-cancel-flex></app-cancel-flex>
-			<app-type-of-place (click)="showTop = !showTop"></app-type-of-place>
+		<div class="button-results-btns">
+			<app-cancel-flex style="display: inline-grid;justify-content: center;"></app-cancel-flex>
+			<app-type-of-place (click)="showTop = !showTop" style="display: inline-grid;justify-content: center;">
+			</app-type-of-place>
 
 			<div *ngIf="showTop" class="expanded">
 				<app-type-of-place-expanded></app-type-of-place-expanded>
 			</div>
-			<app-pricefilter (click)="price_expand = !price_expand"></app-pricefilter>
+			<app-pricefilter (click)="price_expand = !price_expand"
+				style="display: inline-grid;justify-content: center;"></app-pricefilter>
 			<div *ngIf="price_expand" class="expanded">
 				<app-price-expand></app-price-expand>
 			</div>
-			<app-more-filters-modal></app-more-filters-modal>
-		</ng-container>
+			<app-more-filters-modal style="display: inline-grid;justify-content: center;"></app-more-filters-modal>
+		</div>
 	</div>
 	<hr />
 	<!-- <app-result-other-places (afterClick)='showAlert($event)'></app-result-other-places> -->

@@ -8,41 +8,21 @@
   height: 150vh;
   width: 65vw;
   float: left;
-  background-color: cadetblue;
+  background-color: #fff;
 }
 #button-results {
   width: 100%;
   padding-top: 100px;
   height: 300px;
-  background-color: rgb(188, 223, 225);
+  background-color: #fff;
   padding-left: 20px;
 }
 
-.button-results-btnResults{
-    font-weight: 400 ;
-    font-size: 14px ;
-    line-height: 18px ;
-    cursor: pointer ;
-    text-align: center ;
-    border: 2px solid rgb(0, 0, 0) ;
-    background-color: rgb(255, 255, 255) ;
-    outline: none ;
-    border-radius: 10px ;
-    color: rgb(34, 34, 34) ;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif ;
-    position: relative ;
-    padding: 12px 18px ;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    font: 400 13.3333px Arial;
-    display: inline-block ;
-    white-space: nowrap ;
-    background-color: #fff;
-    -webkit-font-smoothing: antialiased;
+.button-results-btns{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1%;
+  justify-content: space-between
 }
 
 #map-section {
@@ -52,7 +32,7 @@
   top: 80px;
   left: 65vw;
   z-index: 0;
-  background-color: darkgoldenrod;
+  /* background-color: darkgoldenrod; */
 }
 #hide-map-results {
   background-color: #f2f2f2;
