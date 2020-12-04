@@ -84,23 +84,18 @@ export class ResultsComponent implements OnInit {
                 let bedrooms = results[item]._source.bedrooms;
                 // Construct the full HTML string that we want to append to the div
                 resultdiv.append(
-                  '<div class="result">' +
-                    '<div><h2>' +
-                    name +
-                    '</h2><p>' +
-                    'Price: $' +
-                    price +
-                    ' beds: ' +
-                    beds +
-                    ' &mdash;' +
-                    '  bedrooms: ' +
-                    bedrooms +
-                    '  &mdash; bathrooms: ' +
-                    bathrooms +
-                    ' </p>' +
-                    '<img src="' +
-                    pic +
-                    '"> </div></div>'
+                  `<div class="result">
+                  <div>
+                  <h2>${name}</h2>
+                  <p>
+                  Price: $${price} 
+                  beds: ${beds} &mdash;  
+                  bedrooms: ${bedrooms}  &mdash; 
+                  bathrooms: ${bathrooms} 
+                  </p>
+                  <img src="${pic}"> 
+                  </div>
+                  </div>`
                 );
               }
             } else {
