@@ -17,7 +17,8 @@ export class ResultsComponent implements OnInit {
   selection: string;
   price_expand: boolean = false;
   public guests : number; 
-  public location : string;
+  public location: string;
+  resultsFromSearch: number = 0;
 
   constructor( private route: ActivatedRoute) {
     this.route.queryParams.subscribe(params => {
@@ -80,7 +81,7 @@ export class ResultsComponent implements OnInit {
             );
             // Get the part of the JSON response that we care about
             let results = response['hits']['hits'];
-
+            this.resultsFromSearch = results.length;
             if (results.length > 0) {
               console.log("Results: " + results)
               loadingdiv.hide();
