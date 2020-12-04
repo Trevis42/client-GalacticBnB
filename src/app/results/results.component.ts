@@ -18,7 +18,6 @@ export class ResultsComponent implements OnInit {
   name = 'Angular';
   selection: string;
   price_expand: boolean = false;
-  showTop: boolean = false;
   constructor() {}
   public place : string;
 
