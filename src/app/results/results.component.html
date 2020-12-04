@@ -25,7 +25,12 @@
 	<hr />
 	<!-- <app-result-other-places (afterClick)='showAlert($event)'></app-result-other-places> -->
 	<app-result-other-places (afterClick)='otherPlaces($event)'></app-result-other-places>
-	<div id="results"></div>
+	<div id="results" style="display: grid; 
+	grid-template-columns: 1fr; 
+	grid-template-rows: auto; 
+	gap: .5em 0px;
+	padding-left: 2%;">
+	</div>
 </div>
 <div id="map-section">
 	<button id="hide-map-results" (click)="hideMap()">
