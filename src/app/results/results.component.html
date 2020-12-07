@@ -4,13 +4,10 @@
 <div id="scroll-section">
 	<div id="button-results">
 		<input id="search" autocomplete="on" placeholder="Search" />
-		<h6>#_ of results - from day to day &#10038; {{guests}} guests</h6>
-		<ng-container *ngIf="location === ''; else elseTemplate">
-			<h2>Stays in an unknown location</h2>
-		</ng-container>
-		<ng-template #elseTemplate>
-			<h2>Stays in {{location}}</h2>
-		</ng-template>
+
+		<h6 id="num-results"></h6>
+		<h2 id="stays-prompt"></h2>
+
 		<div class="button-results-btns">
 			<app-cancel-flex style="display: inline-grid;justify-content: center;"></app-cancel-flex>
 			<app-type-of-place (click)="showTop = !showTop" style="display: inline-grid;justify-content: center;">
