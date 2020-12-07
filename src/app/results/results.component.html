@@ -3,14 +3,9 @@
 </div>
 <div id="scroll-section">
 	<div id="button-results">
-		<input id="search" autocomplete="on" placeholder="Search" />
-		<h6>#_ of results - from day to day &#10038; {{guests}} guests</h6>
-		<ng-container *ngIf="location === ''; else elseTemplate">
-			<h2>Stays in an unknown location</h2>
-		</ng-container>
-		<ng-template #elseTemplate>
-			<h2>Stays in {{location}}</h2>
-		</ng-template>
+		<!-- // <input id="search" autocomplete="on" placeholder="Search" /> -->
+		<h6>|| #_ of results || from day to day || guests {{this.guests}} __ ||</h6>
+		<h2>Stays in {{this.location}}</h2>
 		<div class="button-results-btns">
 			<app-cancel-flex style="display: inline-grid;justify-content: center;"></app-cancel-flex>
 			<app-type-of-place (click)="showTop = !showTop" style="display: inline-grid;justify-content: center;">
@@ -41,4 +36,6 @@
 	<button id="hide-map-results" (click)="hideMap()">
 		<span id="hide-map-span">x</span>
 	</button>
+	<img src="assets/img/map_filler.png" id="mapFiller" />
 </div>
+<button id="return-map-btn" (click)="showMap()">Return Map</button>
